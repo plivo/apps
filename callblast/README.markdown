@@ -1,4 +1,4 @@
-h1. CallBlast!
+# CallBlast!
 
 _Schedule a batch call to multiple numbers (specified in a file)_
 
