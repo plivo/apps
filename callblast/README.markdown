@@ -1,7 +1,8 @@
 # Plivo CallBlast App!
-## [Demo Running Here](http://immense-scrubland-3463.herokuapp.com/)
 
-_tl;dr; Schedule a batch call to multiple numbers (specified in a file)_
+## Schedule a batch call to multiple numbers (specified in a file)_
+
+### [Demo Running Here](http://immense-scrubland-3463.herokuapp.com/)
 
 - The messege can be provided as text and audio file.
 - Heroku deployable
