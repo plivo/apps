@@ -2,7 +2,7 @@
 
 ## Schedule a batch call
 
-### [Demo Running Here](http://immense-scrubland-3463.herokuapp.com/)
+### [Demo Running Here](http://callblast.plivo.com/)
 
 ### Features
 - The messege can be provided as text and audio file.
