@@ -1,0 +1,54 @@
+<!doctype html>
+<title>CallBlast</title>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Port+Lligat+Sans|Kavoon|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="box">
+        <div class="h1">Call Scheduler</div>
+        <br><br>
+        <form action="{{ url_for('input')}}" method=post>
+            I want you to call numbers in this file
+            <br>
+            <input class="input" type="text" name="csv" placeholder='CSV file url' required >
+            <br> and tell them<br>
+            <textarea class="input" rows="2" cols="50" maxlength="140" name="message" placeholder='message text.' required ></textarea>
+            <br>
+
+            <select name="order" required >
+                  <option value="before">before</option>
+                  <option value="after">after</option>
+            </select><br>
+            playing this<br>
+
+            <input class="input" type="text" name="audio" placeholder='audio file (url)' required >
+            <br>
+            on
+            <br>
+            <input class="input" type="date" name="date" required >
+            <br>
+            at
+            <br>
+            <input class="input" type="time" name="time" required > GMT.
+            <br><br>
+            <p> Here's my <input class="input" type="text" name="id" placeholder='Auth ID' required > and
+            <input class="input" type="text" name="token" placeholder='Auth Token' required ></p>.
+            <br>
+            I have a cps quota of <input class="input" type="number" default="2" name="cps" min="2" placeholder="Calls Per Second" required>
+            <br>
+            <p>You can reach me at <input class="input" type="text" name="from_no" placeholder='Number to call' required > to confirm the blast.
+            <br><br>
+            <input class="input" type="submit" value="Go plivo go!" required ></p>
+        </form>
+    </div>
+
+    <div class="navigator">
+      <img class="sdf" src="{{ url_for('static', filename="Plivo_short_logo.png") }}">
+      <p>Call Blast!</p>
+    </div>
+
+    <div class="footer"><p>Built by</p><img id="buit" src="{{ url_for('static', filename='logo.png') }}"></p>
+    </div>
+</body>
