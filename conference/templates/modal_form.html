@@ -1,0 +1,48 @@
+<div id="form_modal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true" tabbedindex=-1>&times;</button>
+		<h3> New Conference </h3>
+	</div>
+	<form class="form-horizontal" method="get" action="{{url_for('create')}}">
+		<div class="modal-body">
+
+		<div class="control-group">
+			<label class="control-label">Subject</label>
+    			<div class="controls">
+				<input type="text" name="subject" placeholder="What are you going to talk about?">
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label">Phone</label>
+    			<div class="controls">
+				<input type="phone" name="phone" placeholder="Your phone number">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Member 1</label>
+    			<div class="controls">
+				<input type="phone" name="member0" placeholder="">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Member 2</label>
+    			<div class="controls">
+				<input type="phone" name="member1" placeholder="">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="radio">
+					<input type="radio" name="record"> Would you like the conference to be recorded?</input>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<div class="controls">
+			<button type="submit" class="btn btn-success">Create Conference</button>
+		</div>
+	</div>
+</form>
+</div>

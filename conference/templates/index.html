@@ -1,0 +1,58 @@
+<html>
+	<title>Conference Call</title>
+	<head>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="static/main.css" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+                ul {
+                        width: 500px;
+			margin: auto;
+			position: relative;
+			top: 50px;
+                }
+ 
+		 div#conference{
+			 position: relative;
+			 top: 50px;
+		 }
+		 button#create{
+			 position: position;
+			 left: 20px;
+		 }
+		 ul#conference_list{
+			 position: relative;
+			 left: 100px;
+		 }
+        </style>
+	<body>
+		<div id="conference" class="container-fluid">
+			<div class="row-fluid">
+			{% if conferences %}
+			<div class="span12">
+				<h3 class="text-center"> You can join one of the following conferences </h3>
+		<ul class="conference_list">
+		{%for conference in conferences%}
+		<li>
+		<p> {{conference.subject}} - &nbsp;Number:{{conference.conference_number}},PIN:{{conference.conference_pin}} </p>
+		</li>
+		{% endfor %}
+		{% include 'modal_form.html' %}
+		<button id="create" type="button" class="btn btn-success" data-toggle="modal" data-target="#form_modal"> Create a new conference </button>
+	</ul>
+		{% else %}
+		{% include 'form.html' %}
+		{% endif %}
+	</div>
+</div>
+				
+</div>
+	<script>
+		/*$('button').click(function(){
+			$('#form_modal').modal('toggle');
+		});*/
+	</script>
+</body>
+</html>
