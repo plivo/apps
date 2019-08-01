@@ -9,12 +9,12 @@ amqp==1.0.13
 anyjson==0.3.3
 billiard==2.7.3.32
 celery==3.0.23
-gunicorn==18.0
+gunicorn==19.5.0
 itsdangerous==0.23
 kombu==2.5.14
 plivo==0.9.1
 psycopg2==2.5.1
 python-dateutil==2.1
-requests==1.2.3
+requests==2.20.0
 six==1.4.1
 wsgiref==0.1.2

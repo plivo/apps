@@ -5,7 +5,7 @@ Werkzeug==0.9.4
 argparse==1.2.1
 itsdangerous==0.23
 wsgiref==0.1.2
-requests==2.0.0
-gunicorn==18.0
+requests==2.20.0
+gunicorn==19.5.0
 plivo>=0.3
 redis==2.4.12
