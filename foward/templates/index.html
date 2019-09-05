@@ -1,0 +1,34 @@
+<html>
+	<title>Call Forward</title>
+	<head>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="static/main.css" rel="stylesheet">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	</head>
+	<body>
+		<form class="form-horizontal" method="get" action="{{url_for('save')}}">
+		<legend> Make a Forward Table Entry</legend>
+
+		{% for entry in "sip,mobile,caller name".split(",")	%}
+		<div class="control-group">
+			<label class="control-label">{{entry.title()}}</label>
+    			<div class="controls">
+				<input type="phone" name="{{entry}}" placeholder="{{entry.title()}}">
+			</div>
+		</div>
+		{% endfor %}
+		<div class="controls">
+			<button type="submit" class="btn">Submit</button>
+		</div>
+		</form>
+				
+	</div>
+	<script>
+	/*	$('button').click(function(){
+			$.getJSON('/call',{number:$('input#phonenumber').val(),message:$('textarea').val()},function(data){
+					alert("Call fired");
+				});
+		});*/
+	</script>
+</body>
+</html>
